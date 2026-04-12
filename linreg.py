@@ -504,3 +504,101 @@ mr_85_or_speed_200_df["Website"] = mr_85_or_speed_200_df["Website"].astype("cate
 
 # for name, model in zip(["m0","m1","m2","m3","m4"], [m0,m1,m2,m3,m4]):
 #     print(name, model.aic)
+
+
+
+# ---------------- ----------------
+# ---------------- ROBUSTNESS CHECKS ----------------
+# --------------------------------
+
+# ----------------  NO W1 ----------------
+no_w1_df = df.query("Website != 1")
+no_w1_df["Website"] = no_w1_df["Website"].astype("category")
+no_w1_df["Website"] = no_w1_df["Website"].cat.remove_unused_categories()
+
+# speed
+# m0 = smf.mixedlm("Speed ~ 1", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False) 
+
+# m1 = smf.mixedlm("Speed ~ Age", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# m2 = smf.mixedlm("Speed ~ Age + Icon", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# m3 = smf.mixedlm("Speed ~ Age + Icon + Website", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# m4 = smf.mixedlm("Speed ~ Age * Icon + Website", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# print(m0.summary())
+# print(m1.summary())
+# print(m2.summary())
+# print(m3.summary())
+# print(m4.summary())
+
+# for name, model in zip(["m0","m1","m2","m3","m4"], [m0,m1,m2,m3,m4]):
+#     print(name, model.aic)
+
+# mr
+# m0 = smf.mixedlm("Misclick_Rate ~ 1", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False) 
+
+# m1 = smf.mixedlm("Misclick_Rate ~ Age", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# m2 = smf.mixedlm("Misclick_Rate ~ Age + Icon", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# m3 = smf.mixedlm("Misclick_Rate ~ Age + Icon + Website", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# m4 = smf.mixedlm("Misclick_Rate ~ Age * Icon + Website", no_w1_df, groups=no_w1_df["Maze_ID"]).fit(reml=False)
+
+# print(m0.summary())
+# print(m1.summary())
+# print(m2.summary())
+# print(m3.summary())
+# print(m4.summary())
+
+# for name, model in zip(["m0","m1","m2","m3","m4"], [m0,m1,m2,m3,m4]):
+#     print(name, model.aic)
+
+
+
+# ----------------  NO W3 ----------------
+no_w3_df = df.query("Website != 3")
+no_w3_df["Website"] = no_w3_df["Website"].astype("category")
+no_w3_df["Website"] = no_w3_df["Website"].cat.remove_unused_categories()
+
+# speed
+# m0 = smf.mixedlm("Speed ~ 1", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False) 
+
+# m1 = smf.mixedlm("Speed ~ Age", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+# m2 = smf.mixedlm("Speed ~ Age + Icon", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+# m3 = smf.mixedlm("Speed ~ Age + Icon + Website", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+# m4 = smf.mixedlm("Speed ~ Age * Icon + Website", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+# print(m0.summary())
+# print(m1.summary())
+# print(m2.summary())
+# print(m3.summary())
+# print(m4.summary())
+
+# for name, model in zip(["m0","m1","m2","m3","m4"], [m0,m1,m2,m3,m4]):
+#     print(name, model.aic)
+
+# mr
+m0 = smf.mixedlm("Misclick_Rate ~ 1", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False) 
+
+m1 = smf.mixedlm("Misclick_Rate ~ Age", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+m2 = smf.mixedlm("Misclick_Rate ~ Age + Icon", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+m3 = smf.mixedlm("Misclick_Rate ~ Age + Icon + Website", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+m4 = smf.mixedlm("Misclick_Rate ~ Age * Icon + Website", no_w3_df, groups=no_w3_df["Maze_ID"]).fit(reml=False)
+
+print(m0.summary())
+print(m1.summary())
+print(m2.summary())
+print(m3.summary())
+print(m4.summary())
+
+# for name, model in zip(["m0","m1","m2","m3","m4"], [m0,m1,m2,m3,m4]):
+#     print(name, model.aic)
