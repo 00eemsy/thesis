@@ -105,7 +105,7 @@ icon_type_distr_per_age_percentages = icon_type_distr_per_age / 240
 # TO 60+ = missing 18.5 (!!!!!)
 
 # chi square test to see if observed drop-off matches expected drop-off (a.k.a. if not infl by icon type or age)
-res1 = chisquare([26.5,25.5,27.5,28.5,26.5,18.5], [25.5,25.5,25.5,25.5,25.5,25.5])
+# res1 = chisquare([26.5,25.5,27.5,28.5,26.5,18.5], [25.5,25.5,25.5,25.5,25.5,25.5])
 # print(res1.statistic, res1.pvalue) # not sig! so it is ~relatively equal distr of data, not effected by anything rlly.
 
 # chi square test to see if finished vs not finished for icon/age have =-ish proportions
@@ -120,6 +120,29 @@ chi2, p, dof, expected = chi2_contingency(table)
 # print("p-value =", p)
 
 # i must also add that 76 ppl were "mission unfinished" & 77 were "drop off" (didn't even make it to the figma)
+
+
+# WE'RE REDOING CHI2 BC WHY DID I DO THAT
+
+young_table = [
+    [39, 39, 38],
+    [4, 6, 6]
+]
+
+old_table = [
+    [47, 40, 37],
+    [20, 17, 23]
+]
+
+chi2, p, dof, expected = chi2_contingency(young_table)
+
+print("young chi2 =", chi2)
+print("young p-value =", p)
+
+chi2, p, dof, expected = chi2_contingency(old_table)
+
+print("old chi2 =", chi2)
+print("old p-value =", p)
 
 # ---------------- VARIANCE/STDS ----------------
 # variance per website (speed, mr)

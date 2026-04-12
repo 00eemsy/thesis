@@ -56,6 +56,7 @@ df["Website"] = df["Website"].astype("category")
 no_w1_w3_df = df.query("Website != 1 and Website !=3")
 no_w1_w3_df["Website"] = no_w1_w3_df["Website"].astype("category")
 no_w1_w3_df["Website"] = no_w1_w3_df["Website"].cat.remove_unused_categories()
+print(no_w1_w3_df)
 
 # speed
 # m0 = smf.mixedlm("Speed ~ 1", no_w1_w3_df, groups=no_w1_w3_df["Maze_ID"]).fit(reml=False) 
@@ -96,8 +97,6 @@ no_w1_w3_df["Website"] = no_w1_w3_df["Website"].cat.remove_unused_categories()
 
 # for name, model in zip(["m0","m1","m2","m3","m4"], [m0,m1,m2,m3,m4]):
 #     print(name, model.aic)
-
-
 
 # ---------------- >80% MR ----------------
 
