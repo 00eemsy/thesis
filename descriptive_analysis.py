@@ -134,17 +134,24 @@ old_table = [
     [20, 17, 23]
 ]
 
-chi2, p, dof, expected = chi2_contingency(young_table)
+# chi2, p, dof, expected = chi2_contingency(young_table)
 
-print("young chi2 =", chi2)
-print("young p-value =", p)
+# print("young chi2 =", chi2)
+# print("young p-value =", p)
 
-chi2, p, dof, expected = chi2_contingency(old_table)
+# chi2, p, dof, expected = chi2_contingency(old_table)
 
-print("old chi2 =", chi2)
-print("old p-value =", p)
+# print("old chi2 =", chi2)
+# print("old p-value =", p)
 
 # ---------------- VARIANCE/STDS ----------------
+# variance ig
+speed_var_ig = df['Speed'].std()
+mr_var_ig = df['Misclick_Rate'].std()
+
+print('speed std: ' + str(speed_var_ig))
+print('mr var: ' + str(mr_var_ig))
+
 # variance per website (speed, mr)
 speed_var = df.groupby('Website')['Speed'].std()
 mr_var = df.groupby('Website')['Misclick_Rate'].std()
