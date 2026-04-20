@@ -1,0 +1,42 @@
+\contentsline {paragraph}{Thank you to: }{i}{section*.2}%
+\contentsline {chapter}{Chapter 1: Background Literature}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Human-Computer Interaction}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Older User Accessibility}{2}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Older Users and Icons}{2}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Semantic Distance}{3}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Skeuomorphic Design}{4}{subsection.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}Icons and Text Labels}{6}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}Older Users and Task-Based Experimental Design}{7}{section.1.4}%
+\contentsline {chapter}{Chapter 2: Methodology}{11}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Prolific and Online Survey Platforms}{11}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}In Favor of Online Survey Platforms}{11}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.2}Experimental Design}{13}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Prolific Recruitment and Screening}{13}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Maze and User Tests}{14}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Figma and UI/UX Design Choices}{17}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}Data Analysis}{19}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Data Recording and Migration}{19}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Tech Stack}{20}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Descriptive Statistics}{20}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Mixed Effects Linear Regression}{21}{subsection.2.3.4}%
+\contentsline {chapter}{Chapter 3: Results}{29}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Descriptive Statistics}{29}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Exclusion Criteria}{29}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Text Only and 60+}{35}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Drop-Off Rate}{37}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Mixed Effects Linear Regression}{37}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Speed}{38}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Misclick Rate}{40}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Robustness Checks}{42}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}No Exclusions}{42}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Website 1}{44}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Website 3}{45}{subsection.3.3.3}%
+\contentsline {chapter}{Chapter 4: Discussion}{49}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Interpretations}{49}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Text-Only and 60+ Interpretations}{49}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Icon with Text Labels Interpretations}{50}{subsection.4.1.2}%
+\contentsline {section}{\numberline {4.2}Limitations}{51}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Extensions}{53}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Conclusion}{54}{section.4.4}%
+\contentsline {chapter}{Appendix A: The First Appendix}{55}{appendix.A}%
+\contentsline {chapter}{Appendix B: The Second Appendix, for Fun}{57}{appendix.B}%
