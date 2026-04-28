@@ -183,6 +183,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 
 
 # ---------------- PLOTS PLOTS PLOTS ----------------
+
 # user_df = df.groupby('Maze_ID').agg({
 #     'Speed': 'sum',
 #     'Misclick_Rate': 'mean',
@@ -194,20 +195,23 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 #     plt.scatter(
 #         subset['Speed'],
 #         subset['Misclick_Rate'],
-#         label=f'Age {age}'
+#         label=f'Age {age}',
 #     )
 
 # plt.legend()
-# plt.xlabel('Speed (s)')
+# plt.xlabel('Reaction Time (s)')
 # plt.ylabel('Misclick Rate (%)')
-# plt.title('Total Speed vs Average Misclick Rate by Age Group')
+# plt.title('Total Reaction Time vs Average Misclick Rate by Age Group')
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(10))
 # ax.yaxis.set_major_locator(tck.MultipleLocator(5))
+# plt.xlim(left=0)  
+# plt.ylim(bottom=0) 
 # plt.xticks(rotation=45)
 # plt.plot([0,200], [80,80], color='red', linestyle='--')
 # plt.plot([200,200],[80,0], color='red', linestyle='--')
 # plt.show()
+# plt.show(colors)
 
 # df_filtered = df.query("Website != 1 and Website != 3")
 # user_df = df_filtered.groupby('Maze_ID').agg({
@@ -226,12 +230,14 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 #     )
 
 # plt.legend()
-# plt.xlabel('Speed (s)')
+# plt.xlabel('Reaction Time (s)')
 # plt.ylabel('Misclick Rate (%)')
-# plt.title('Total Speed vs Average Misclick Rate by Age Group (Excluding Websites 1 and 3)')
+# plt.title('Total Reaction Time vs Average Misclick Rate by Age Group (Excluding Websites 1 and 3)')
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(10))
 # ax.yaxis.set_major_locator(tck.MultipleLocator(5))
+# plt.xlim(left=0, right=250)  
+# plt.ylim(bottom=0) 
 # plt.xticks(rotation=45)
 # plt.plot([0,200], [80,80], color='red', linestyle='--')
 # plt.plot([200,200],[80,0], color='red', linestyle='--')
@@ -252,28 +258,30 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 #     )
 
 # plt.legend()
-# plt.xlabel('Speed (s)')
+# plt.xlabel('Reaction Time (s)')
 # plt.ylabel('Misclick Rate (%)')
-# plt.title('Total Speed vs Median Misclick Rate by Age Group')
+# plt.title('Total Reaction Time vs Median Misclick Rate by Age Group')
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(10))
 # ax.yaxis.set_major_locator(tck.MultipleLocator(5))
+# plt.xlim(left=0)  
+# plt.ylim(bottom=0) 
 # plt.xticks(rotation=45)
 # plt.show()
 
 # # for avgs
-# avg_speed_per_website_plot = avg_speed_per_website.plot(kind='bar', ylabel='Speed (s)', title='Average Speed per Website')
+# avg_speed_per_website_plot = avg_speed_per_website.plot(kind='bar', ylabel='Reaction Time (s)', title='Average Reaction Time per Website')
 # plt.show()
 # avg_mr_per_website_plot = avg_mr_per_website.plot(kind='bar', ylabel='Misclick Rate (%)', title='Average Misclick Rate per Website')
 # plt.show()
 
-# avg_speed_per_website_and_age_plot = avg_speed_per_website_and_age.plot(kind='bar', xlabel='Website and Age Group', ylabel='Speed (s)', title='Average Speed per Website and Age Group')
+# avg_speed_per_website_and_age_plot = avg_speed_per_website_and_age.plot(kind='bar', xlabel='Website and Age Group', ylabel='Reaction Time (s)', title='Average Reaction Time per Website and Age Group')
 # plt.show()
 # avg_mr_per_website_and_age_plot = avg_mr_per_website_and_age.plot(kind='bar', xlabel='Website and Age Group', ylabel='Misclick Rate (%)', title='Average Misclick Rate per Website and Age Group')
 # plt.show()
 
 # # for per icon type
-# speed_per_icon_type_plot = speed_per_icon_type.plot(kind='bar', xlabel='Icon Type', ylabel='Speed (s)', title='Speed per Icon Type')
+# speed_per_icon_type_plot = speed_per_icon_type.plot(kind='bar', xlabel='Icon Type', ylabel='Reaction Time (s)', title='Average Reaction Time per Icon Type')
 # plt.show()
 # mr_per_icon_type_plot = mr_per_icon_type.plot(kind='bar', xlabel='Icon Type', ylabel='Misclick Rate (%)', title='Misclick Rate per Icon Type')
 # plt.show()
@@ -291,71 +299,71 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # histogram for speeds (per website)
 
 # distr_of_speeds_w1 = df[df['Website'] == 1]['Speed']
-# distr_of_speeds_w1_plot = distr_of_speeds_w1.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 1')
+# distr_of_speeds_w1_plot = distr_of_speeds_w1.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 1')
 # plt.show()
 
 # distr_of_speeds_age_w1 = df[df['Website'] == 1].groupby('Age')['Speed']
-# distr_of_speeds_age_w1_plot = distr_of_speeds_age_w1.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 1 per Age Group', alpha=.5)
+# distr_of_speeds_age_w1_plot = distr_of_speeds_age_w1.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 1 per Age Group', alpha=.5)
 # plt.legend()
 # plt.show()
 
 # distr_of_speeds_w2 = df[df['Website'] == 2]['Speed']
-# distr_of_speeds_w2_plot = distr_of_speeds_w2.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 2')
+# distr_of_speeds_w2_plot = distr_of_speeds_w2.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 2')
 # plt.show()
 
 # distr_of_speeds_age_w2 = df[df['Website'] == 2].groupby('Age')['Speed']
-# distr_of_speeds_age_w2_plot = distr_of_speeds_age_w2.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 2 per Age Group', alpha=.5)
+# distr_of_speeds_age_w2_plot = distr_of_speeds_age_w2.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 2 per Age Group', alpha=.5)
 # plt.legend()
 # plt.show()
 
 # distr_of_speeds_w3 = df[df['Website'] == 3]['Speed']
-# distr_of_speeds_w3_plot = distr_of_speeds_w3.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 3')
+# distr_of_speeds_w3_plot = distr_of_speeds_w3.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 3')
 # plt.show()
 
 # distr_of_speeds_age_w3 = df[df['Website'] == 3].groupby('Age')['Speed']
-# distr_of_speeds_age_w3_plot = distr_of_speeds_age_w3.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 3 per Age Group', alpha=.5)
+# distr_of_speeds_age_w3_plot = distr_of_speeds_age_w3.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 3 per Age Group', alpha=.5)
 # plt.legend()
 # plt.show()
 
 # distr_of_speeds_w4 = df[df['Website'] == 4]['Speed']
-# distr_of_speeds_w4_plot = distr_of_speeds_w4.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 4')
+# distr_of_speeds_w4_plot = distr_of_speeds_w4.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 4')
 # plt.show()
 
 # distr_of_speeds_age_w4 = df[df['Website'] == 4].groupby('Age')['Speed']
-# distr_of_speeds_age_w4_plot = distr_of_speeds_age_w4.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 4 per Age Group', alpha=.5)
+# distr_of_speeds_age_w4_plot = distr_of_speeds_age_w4.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 4 per Age Group', alpha=.5)
 # plt.legend()
 # plt.show()
 
 # distr_of_speeds_w5 = df[df['Website'] == 5]['Speed']
-# distr_of_speeds_w5_plot = distr_of_speeds_w5.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 5')
+# distr_of_speeds_w5_plot = distr_of_speeds_w5.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 5')
 # plt.show()
 
 # distr_of_speeds_age_w5 = df[df['Website'] == 5].groupby('Age')['Speed']
-# distr_of_speeds_age_w5_plot = distr_of_speeds_age_w5.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 5 per Age Group', alpha=.5)
+# distr_of_speeds_age_w5_plot = distr_of_speeds_age_w5.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 5 per Age Group', alpha=.5)
 # plt.legend()
 # plt.show()
 
 # distr_of_speeds_w6 = df[df['Website'] == 6]['Speed']
-# distr_of_speeds_w6_plot = distr_of_speeds_w6.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 6')
+# distr_of_speeds_w6_plot = distr_of_speeds_w6.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 6')
 # plt.show()
 
 # distr_of_speeds_age_w6 = df[df['Website'] == 6].groupby('Age')['Speed']
-# distr_of_speeds_age_w6_plot = distr_of_speeds_age_w6.plot(kind='hist', xlabel='Speed (s)', title='Speed Distribution for Website 6 per Age Group', alpha=.5)
+# distr_of_speeds_age_w6_plot = distr_of_speeds_age_w6.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Reaction Time Distribution for Website 6 per Age Group', alpha=.5)
 # plt.legend()
 # plt.show()
 
 # histogram for misclick rates
 
-# distr_of_mr_w1 = df[df['Website'] == 1]['Misclick_Rate']
-# distr_of_mr_w1_plot = distr_of_mr_w1.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate for Website 1', weights=np.ones(len(distr_of_mr_w1)) / len(distr_of_mr_w1))
-# ax = plt.gca()
-# ax.xaxis.set_major_locator(tck.MultipleLocator(5))
-# ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
-# plt.xticks(rotation=45)
-# plt.show()
+distr_of_mr_w1 = df[df['Website'] == 1]['Misclick_Rate']
+distr_of_mr_w1_plot = distr_of_mr_w1.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 1', weights=np.ones(len(distr_of_mr_w1)) / len(distr_of_mr_w1))
+ax = plt.gca()
+ax.xaxis.set_major_locator(tck.MultipleLocator(5))
+ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
+plt.xticks(rotation=45)
+plt.show()
 
 # distr_of_mr_age_w1 = df[df['Website'] == 1].groupby('Age')['Misclick_Rate']
-# distr_of_mr_age_w1_plot= distr_of_mr_age_w1.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 1 per Age Group', alpha=.5)
+# distr_of_mr_age_w1_plot= distr_of_mr_age_w1.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 1 per Age Group', alpha=.5)
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # plt.xticks(rotation=45)
@@ -363,7 +371,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_w2 = df[df['Website'] == 2]['Misclick_Rate']
-# distr_of_mr_w2_plot = distr_of_mr_w2.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 2', weights=np.ones(len(distr_of_mr_w2)) / len(distr_of_mr_w2))
+# distr_of_mr_w2_plot = distr_of_mr_w2.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 2', weights=np.ones(len(distr_of_mr_w2)) / len(distr_of_mr_w2))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -371,7 +379,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_age_w2 = df[df['Website'] == 2].groupby('Age')['Misclick_Rate']
-# distr_of_mr_age_w2_plot = distr_of_mr_age_w2.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 2 per Age Group', alpha=.5)
+# distr_of_mr_age_w2_plot = distr_of_mr_age_w2.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 2 per Age Group', alpha=.5)
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # plt.xticks(rotation=45)
@@ -379,7 +387,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_w3 = df[df['Website'] == 3]['Misclick_Rate']
-# distr_of_mr_w3_plot = distr_of_mr_w3.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 3', weights=np.ones(len(distr_of_mr_w3)) / len(distr_of_mr_w3))
+# distr_of_mr_w3_plot = distr_of_mr_w3.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 3', weights=np.ones(len(distr_of_mr_w3)) / len(distr_of_mr_w3))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -387,7 +395,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_age_w3 = df[df['Website'] == 3].groupby('Age')['Misclick_Rate']
-# distr_of_mr_age_w3_plot = distr_of_mr_age_w3.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 3 per Age Group', alpha=.5)
+# distr_of_mr_age_w3_plot = distr_of_mr_age_w3.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 3 per Age Group', alpha=.5)
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # plt.xticks(rotation=45)
@@ -395,7 +403,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_w4 = df[df['Website'] == 4]['Misclick_Rate']
-# distr_of_mr_w4_plot = distr_of_mr_w4.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 4', weights=np.ones(len(distr_of_mr_w4)) / len(distr_of_mr_w4))
+# distr_of_mr_w4_plot = distr_of_mr_w4.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 4', weights=np.ones(len(distr_of_mr_w4)) / len(distr_of_mr_w4))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -403,7 +411,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_age_w4 = df[df['Website'] == 4].groupby('Age')['Misclick_Rate']
-# distr_of_mr_age_w4_plot = distr_of_mr_age_w4.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 4 per Age Group', alpha=.5)
+# distr_of_mr_age_w4_plot = distr_of_mr_age_w4.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 4 per Age Group', alpha=.5)
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # plt.xticks(rotation=45)
@@ -411,7 +419,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_w5 = df[df['Website'] == 5]['Misclick_Rate']
-# distr_of_mr_w5_plot = distr_of_mr_w5.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 5', weights=np.ones(len(distr_of_mr_w5)) / len(distr_of_mr_w5))
+# distr_of_mr_w5_plot = distr_of_mr_w5.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants',  title='Misclick Rate Distribution for Website 5', weights=np.ones(len(distr_of_mr_w5)) / len(distr_of_mr_w5))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -419,7 +427,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_age_w5 = df[df['Website'] == 5].groupby('Age')['Misclick_Rate']
-# distr_of_mr_age_w5_age = distr_of_mr_age_w5.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 5 per Age Group', alpha=.5)
+# distr_of_mr_age_w5_age = distr_of_mr_age_w5.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 5 per Age Group', alpha=.5)
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # plt.xticks(rotation=45)
@@ -427,7 +435,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_w6 = df[df['Website'] == 6]['Misclick_Rate']
-# distr_of_mr_w6_plot = distr_of_mr_w6.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 6', weights=np.ones(len(distr_of_mr_w6)) / len(distr_of_mr_w6))
+# distr_of_mr_w6_plot = distr_of_mr_w6.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 6', weights=np.ones(len(distr_of_mr_w6)) / len(distr_of_mr_w6))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -435,7 +443,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.show()
 
 # distr_of_mr_age_w6 = df[df['Website'] == 6].groupby('Age')['Misclick_Rate']
-# distr_of_mr_age_w6_plot = distr_of_mr_age_w6.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 6 per Age Group', alpha=.5)
+# distr_of_mr_age_w6_plot = distr_of_mr_age_w6.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 6 per Age Group', alpha=.5)
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # plt.xticks(rotation=45)
@@ -445,16 +453,16 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # histogram for total speed
 
 # distr_of_total_speed = df.groupby('Maze_ID')['Speed'].sum()
-# distr_of_total_speed_plot = distr_of_total_speed.plot(kind='hist', xlabel='Speed (s)', title='Total Speed Across All Websites')
+# distr_of_total_speed_plot = distr_of_total_speed.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Total Reaction Time Across All Websites Distribution')
 # plt.show()
 
 # distr_of_total_speed_age = df.groupby(['Maze_ID', 'Age'])['Speed'].sum().groupby('Age')
-# distr_of_total_speed_age_plot = distr_of_total_speed_age.plot(kind='hist', xlabel='Speed (s)', title='Total Speed Across All Websites', alpha=.5)
+# distr_of_total_speed_age_plot = distr_of_total_speed_age.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Total Reaction Time Across All Websites Distribution per Age Group', alpha=.5)
 # plt.legend()
-# # plt.show()
+# plt.show()
 
 # distr_of_avg_speed = df['Speed'].dropna()
-# distr_of_avg_speed_plot = distr_of_avg_speed.plot(kind='hist', xlabel='Speed (s)', title='Average Speed Across All Websites', weights=np.ones(len(distr_of_avg_speed)) / len(distr_of_avg_speed))
+# distr_of_avg_speed_plot = distr_of_avg_speed.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Average Reaction Time Across All Websites Distribution', weights=np.ones(len(distr_of_avg_speed)) / len(distr_of_avg_speed))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(10))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
