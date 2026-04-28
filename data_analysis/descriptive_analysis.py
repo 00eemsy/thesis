@@ -269,7 +269,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # plt.xticks(rotation=45)
 # plt.show()
 
-# # for avgs
+# for avgs
 # avg_speed_per_website_plot = avg_speed_per_website.plot(kind='bar', ylabel='Reaction Time (s)', title='Average Reaction Time per Website')
 # plt.show()
 # avg_mr_per_website_plot = avg_mr_per_website.plot(kind='bar', ylabel='Misclick Rate (%)', title='Average Misclick Rate per Website')
@@ -280,15 +280,15 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # avg_mr_per_website_and_age_plot = avg_mr_per_website_and_age.plot(kind='bar', xlabel='Website and Age Group', ylabel='Misclick Rate (%)', title='Average Misclick Rate per Website and Age Group')
 # plt.show()
 
-# # for per icon type
+# for per icon type
 # speed_per_icon_type_plot = speed_per_icon_type.plot(kind='bar', xlabel='Icon Type', ylabel='Reaction Time (s)', title='Average Reaction Time per Icon Type')
 # plt.show()
 # mr_per_icon_type_plot = mr_per_icon_type.plot(kind='bar', xlabel='Icon Type', ylabel='Misclick Rate (%)', title='Misclick Rate per Icon Type')
 # plt.show()
 
-# # CANT DO speed_per_icon_type_and_age_and_website BC UGLY LOLLLL
+# CANT DO speed_per_icon_type_and_age_and_website BC UGLY LOLLLL
 
-# # for drop off
+# for drop off
 # icon_type_distr_percentages_plot = icon_type_distr_percentages.plot(kind='bar', xlabel='Icon Type', ylabel='% Dropped Off', title='Drop-Off Rate per Icon Type')
 # plt.show()
 # icon_type_distr_per_age_percentages = icon_type_distr_per_age_percentages.plot(kind='bar', xlabel='Icon Type and Age Group', ylabel='% Dropped Off', title='Drop-Off Rate per Icon Type and Age Group')
@@ -355,7 +355,7 @@ total_speed_age_var = total_speed_age.groupby('Age')['Speed'].std()
 # histogram for misclick rates
 
 distr_of_mr_w1 = df[df['Website'] == 1]['Misclick_Rate']
-distr_of_mr_w1_plot = distr_of_mr_w1.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 1', weights=np.ones(len(distr_of_mr_w1)) / len(distr_of_mr_w1))
+distr_of_mr_w1_plot = distr_of_mr_w1.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 1', weights=np.ones(len(distr_of_mr_w1)) / len(distr_of_mr_w1))
 ax = plt.gca()
 ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -371,7 +371,7 @@ plt.show()
 # plt.show()
 
 # distr_of_mr_w2 = df[df['Website'] == 2]['Misclick_Rate']
-# distr_of_mr_w2_plot = distr_of_mr_w2.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 2', weights=np.ones(len(distr_of_mr_w2)) / len(distr_of_mr_w2))
+# distr_of_mr_w2_plot = distr_of_mr_w2.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 2', weights=np.ones(len(distr_of_mr_w2)) / len(distr_of_mr_w2))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -387,7 +387,7 @@ plt.show()
 # plt.show()
 
 # distr_of_mr_w3 = df[df['Website'] == 3]['Misclick_Rate']
-# distr_of_mr_w3_plot = distr_of_mr_w3.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 3', weights=np.ones(len(distr_of_mr_w3)) / len(distr_of_mr_w3))
+# distr_of_mr_w3_plot = distr_of_mr_w3.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 3', weights=np.ones(len(distr_of_mr_w3)) / len(distr_of_mr_w3))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -403,7 +403,7 @@ plt.show()
 # plt.show()
 
 # distr_of_mr_w4 = df[df['Website'] == 4]['Misclick_Rate']
-# distr_of_mr_w4_plot = distr_of_mr_w4.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 4', weights=np.ones(len(distr_of_mr_w4)) / len(distr_of_mr_w4))
+# distr_of_mr_w4_plot = distr_of_mr_w4.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 4', weights=np.ones(len(distr_of_mr_w4)) / len(distr_of_mr_w4))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -419,7 +419,7 @@ plt.show()
 # plt.show()
 
 # distr_of_mr_w5 = df[df['Website'] == 5]['Misclick_Rate']
-# distr_of_mr_w5_plot = distr_of_mr_w5.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants',  title='Misclick Rate Distribution for Website 5', weights=np.ones(len(distr_of_mr_w5)) / len(distr_of_mr_w5))
+# distr_of_mr_w5_plot = distr_of_mr_w5.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 5', weights=np.ones(len(distr_of_mr_w5)) / len(distr_of_mr_w5))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -435,7 +435,7 @@ plt.show()
 # plt.show()
 
 # distr_of_mr_w6 = df[df['Website'] == 6]['Misclick_Rate']
-# distr_of_mr_w6_plot = distr_of_mr_w6.plot(kind='hist', xlabel='Misclick Rate (%)', ylabel='Number of Participants', title='Misclick Rate Distribution for Website 6', weights=np.ones(len(distr_of_mr_w6)) / len(distr_of_mr_w6))
+# distr_of_mr_w6_plot = distr_of_mr_w6.plot(kind='hist', xlabel='Misclick Rate (%)', title='Misclick Rate Distribution for Website 6', weights=np.ones(len(distr_of_mr_w6)) / len(distr_of_mr_w6))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(5))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
@@ -462,7 +462,7 @@ plt.show()
 # plt.show()
 
 # distr_of_avg_speed = df['Speed'].dropna()
-# distr_of_avg_speed_plot = distr_of_avg_speed.plot(kind='hist', xlabel='Reaction Time (s)', ylabel='Number of Participants', title='Average Reaction Time Across All Websites Distribution', weights=np.ones(len(distr_of_avg_speed)) / len(distr_of_avg_speed))
+# distr_of_avg_speed_plot = distr_of_avg_speed.plot(kind='hist', xlabel='Reaction Time (s)', title='Average Reaction Time Across All Websites Distribution', weights=np.ones(len(distr_of_avg_speed)) / len(distr_of_avg_speed))
 # ax = plt.gca()
 # ax.xaxis.set_major_locator(tck.MultipleLocator(10))
 # ax.yaxis.set_major_formatter(tck.PercentFormatter(1))
