@@ -23,10 +23,10 @@ _💭: Why choose to study age-based accessibility?_
 ## 📚 MY "TECH" STACK
 Here's what I used to "deploy" my senior thesis: 
 * `Figma` (for UI prototyping, creating user flows for Maze testing) ➡️ Find my designs [here](https://www.figma.com/design/AYTVQfj9zkuQJA3DTUvs96/THES-2.0?node-id=0-1&t=aRtHCTrxtx9kZrTQ-1) <img width="1470" height="732" alt="Screenshot 2026-01-27 at 15 19 52" src="https://github.com/user-attachments/assets/56104e66-25fd-4040-8c40-326b61f9c62f" />
-* `Maze` (for running user study, data collection) ➡️ Demos/link coming soon...
-* `Prolific` (for recruitment) ➡️ Demos/link coming soon...
-* `Python3` (for data analysis) ➡️ Coming to repository soon...
-* `Overleaf` (for LaTeX-ing my research paper/senior thesis) ➡️ Link to thesis paper coming soon...
+* `Maze` (for running user study, data collection)
+* `Prolific` (for recruitment)
+* `Python3` (for data analysis)
+* `Overleaf` (for LaTeX-ing my research paper/senior thesis) ➡️ [here](https://www.linkedin.com/in/emily-shanyi-yu/)
 
 ## 🙏 ACKS
 <small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
